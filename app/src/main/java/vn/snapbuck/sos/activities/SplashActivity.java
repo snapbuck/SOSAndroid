@@ -1,9 +1,14 @@
 package vn.snapbuck.sos.activities;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import vn.snapbuck.sos.R;
 import vn.snapbuck.sos.app.BaseActivity;
@@ -15,7 +20,9 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        hideStatusBar();
         setContentView(R.layout.activity_splash);
+
 
         if (getIntent().getBooleanExtra("EXIT", false)) {
             SplashActivity.this.finish();
@@ -25,6 +32,11 @@ public class SplashActivity extends BaseActivity {
             return;
         }
         startNextActivity();
+    }
+
+    private void hideStatusBar(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     void startNextActivity() {

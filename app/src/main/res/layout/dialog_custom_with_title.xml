@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_box"
+    android:paddingBottom="15sp"
+    android:paddingRight="12sp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+     android:paddingLeft="12sp"
+    android:orientation="vertical" >
+ 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:text="Title"
+        android:textColor="#444"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        />
+ 
+ 
+    <!-- The message -->
+    <TextView
+        android:id="@+id/tvContentDialogFullTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginBottom="10sp"
+        android:gravity="center"
+        android:padding="8sp"
+        android:text="Content Alert"
+        android:textColor="#444"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:typeface="normal" />
+    
+  <!--  <View
+	     android:layout_width="match_parent"
+	     android:layout_height="1sp"
+	     android:background="#eee" /> -->
+    
+ 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="2" >
+        
+         <!-- No Button -->
+
+        <Button
+            android:id="@+id/btnCancelDialogFullTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_ignore"
+            android:gravity="center"
+            android:padding="15sp"
+            android:text="No"
+            android:textColor="#444"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+        
+        <!-- Yes button -->
+        
+    <View
+	     android:layout_width="8sp"
+	     android:layout_height="match_parent"
+	     android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/btnConfirmDialogFullTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_confirm"
+            android:gravity="center"
+            android:padding="15sp"
+            android:text="Yes"
+            android:textColor="#ffff"
+            android:textSize="15dip"
+            android:textStyle="bold"
+            android:typeface="normal" />
+ 
+       
+
+    </LinearLayout>
+ 
+</LinearLayout>

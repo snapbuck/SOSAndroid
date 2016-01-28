@@ -31,3 +31,10 @@ local.properties
 *.ipr
 *~
 *.swp
+
+# New 
+/local.properties
+.DS_Store
+/build
+*.iml
+.idea/

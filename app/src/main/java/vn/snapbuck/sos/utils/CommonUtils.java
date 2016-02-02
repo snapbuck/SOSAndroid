@@ -17,6 +17,8 @@ import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import org.json.JSONException;
@@ -39,6 +41,16 @@ import vn.snapbuck.sos.security.AESEncryptDecrypt;
  * Created by sb4 on 4/20/15.
  */
 public class CommonUtils {
+
+    public static void hideStatusBar(Activity activity){
+        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    public static void hideActionBar(Activity activity){
+
+
+    }
 
     public static String getAppVersion(Context context) {
         String versionName = "";

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_bottom_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img_map"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_map_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crime Map"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_profile_black"
+                />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_notify"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_noti_black"
+               />
+
+            <TextView
+                android:id="@+id/tv_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

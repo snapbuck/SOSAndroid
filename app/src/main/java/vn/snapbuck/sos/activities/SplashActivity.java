@@ -12,6 +12,7 @@ import android.view.WindowManager;
 
 import vn.snapbuck.sos.R;
 import vn.snapbuck.sos.app.BaseActivity;
+import vn.snapbuck.sos.utils.CommonUtils;
 
 /**
  * Created by sb04 on 1/28/16.
@@ -20,7 +21,7 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        hideStatusBar();
+        CommonUtils.hideStatusBar(this);
         setContentView(R.layout.activity_splash);
 
 
@@ -34,10 +35,7 @@ public class SplashActivity extends BaseActivity {
         startNextActivity();
     }
 
-    private void hideStatusBar(){
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    }
+
 
     void startNextActivity() {
         new Handler().postDelayed(new Runnable() {

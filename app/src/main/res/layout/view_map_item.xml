@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_company_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white54"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black87"
+        android:text="Place"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/tv_map_place"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black54"
+        android:text="Address"
+        android:paddingTop="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="12sp"
+        android:id="@+id/tv_map_address"/>
+
+
+</LinearLayout>

@@ -10,6 +10,12 @@ import vn.snapbuck.sos.utils.SBEnums;
  * Created by sb4 on 10/7/15.
  */
 public class BaseFragment extends Fragment {
+
+    public static BaseFragment newInstance() {
+        BaseFragment f = new BaseFragment();
+        return f;
+    }
+
     ProgressDialog progressDialog;
 
     public void showProgressDialog(SBEnums.WorkingStatus status) {

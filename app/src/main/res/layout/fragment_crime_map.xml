@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/view_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp" />
+
+    <ListView
+        android:id="@+id/lv_map_result"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#f4f4f4"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_marginTop="55dp"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/img_location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_location_orange"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="15dp"/>
+
+    <fragment
+        android:id="@+id/fm_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_search"
+        android:layout_marginTop="5dp"
+
+        tools:layout="@layout/view_v_blank" />
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_fab">
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_report_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:textColor="@color/white87"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

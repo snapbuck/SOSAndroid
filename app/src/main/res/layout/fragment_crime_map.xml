@@ -9,9 +9,9 @@
         layout="@layout/view_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="5dp" />
+        android:layout_margin="5dp"
+
+        />
 
     <ListView
         android:id="@+id/lv_map_result"
@@ -37,12 +37,10 @@
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/view_search"
-        android:layout_marginTop="5dp"
-
         tools:layout="@layout/view_v_blank" />
 
     <LinearLayout
+        android:id="@+id/ll_report"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:orientation="vertical"

@@ -1,14 +1,17 @@
 package vn.snapbuck.sos.fragment;
 
 import android.app.Dialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -48,6 +51,7 @@ import vn.snapbuck.sos.utils.SBPlaceJSONParser;
  */
 public class CrimeMapFragment extends BaseFragment implements OnMapReadyCallback, View.OnClickListener {
     private ImageView imgLocation;
+    private LinearLayout llSearch;
     public static final double DEFAULT_LATITUDE = 10.7386064;
     public static final double DEFAULT_LONGITUDE = 106.7075334;
     private EditText mAutocompleteView;
@@ -56,6 +60,7 @@ public class CrimeMapFragment extends BaseFragment implements OnMapReadyCallback
     protected GoogleApiClient mGoogleApiClient;
     private static final LatLngBounds BOUNDS_GREATER_HCM = new LatLngBounds(
             new LatLng(10.773862, 106.628673), new LatLng(10.873862, 106.728673));
+    private LinearLayout llReport;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -80,6 +85,25 @@ public class CrimeMapFragment extends BaseFragment implements OnMapReadyCallback
         imgLocation = (ImageView) V.findViewById(R.id.img_location);
         mAutocompleteView = (EditText) V.findViewById(R.id.et_search);
         lvMapResult = (ListView) V.findViewById(R.id.lv_map_result);
+        llSearch = (LinearLayout) V.findViewById(R.id.view_search);
+        llReport = (LinearLayout) V.findViewById(R.id.ll_report);
+        llReport.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        v.setBackgroundResource(R.drawable.custom_button_fab_pressed);
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        v.setBackgroundResource(R.drawable.custom_button_fab);
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                        v.setBackgroundResource(R.drawable.custom_button_fab);
+                        break;
+                }
+                return false;
+            }
+        });
 
         return V;
     }
@@ -88,6 +112,7 @@ public class CrimeMapFragment extends BaseFragment implements OnMapReadyCallback
     @Override
     public void onMapReady(final GoogleMap map) {
         imgLocation.bringToFront();
+        llSearch.bringToFront();
         if (SBApp.getLatitude() == 0) {
             map.addMarker(new MarkerOptions()
                     .position(new LatLng(DEFAULT_LATITUDE,DEFAULT_LONGITUDE)));

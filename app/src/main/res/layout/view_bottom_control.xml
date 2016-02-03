@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
+            android:background="@drawable/custom_background"
             >
 
             <ImageView
@@ -30,7 +31,8 @@
                 android:id="@+id/tv_map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crime Map"/>
+                android:text=" Crime Map "
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -40,7 +42,8 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp">
+            android:layout_marginRight="40dp"
+            android:background="@drawable/custom_background">
 
             <ImageView
                 android:id="@+id/img_profile"
@@ -53,29 +56,61 @@
                 android:id="@+id/tv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profile"/>
+                android:textStyle="bold"
+                android:text=" Profile "/>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_notify"
+        <RelativeLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/img_notify"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_noti_black"
-               />
-
-            <TextView
-                android:id="@+id/tv_notify"
+            <LinearLayout
+                android:id="@+id/ll_notify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notification"/>
-        </LinearLayout>
+                android:orientation="vertical"
+                android:background="@drawable/custom_background">
+                <ImageView
+                    android:id="@+id/img_notify"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_noti_black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text=" Notification "/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="35dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_header_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:gravity="center"
+                    android:background="@drawable/oval_bg_textview"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:text="4"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
 
     </LinearLayout>

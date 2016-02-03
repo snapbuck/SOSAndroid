@@ -13,6 +13,7 @@
     <color name="lightgreen">#336666</color>
     <color name="darkorange">#cc2303</color>
     <color name="red">#ed3131</color>
+    <color name="dark_red">#9b1919</color>
     <color name="transparent">#00000000</color>
     <color name="radio_button_selected_color">#ff33b5e5</color>
     <color name="radio_button_unselected_color">#555555</color>
@@ -69,6 +70,7 @@
     <color name="black">#000000</color>
     <color name="black70">#b3000000</color>
     <color name="black30">#4d000000</color>
+    <color name="black10">#1A000000</color>
     <color name="black87">#df000000</color>
     <color name="black54">#8a000000</color>
     <color name="black38">#60000000</color>

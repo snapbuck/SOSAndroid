@@ -1,21 +1,12 @@
 package vn.snapbuck.sos.activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -27,7 +18,6 @@ import vn.snapbuck.sos.app.BaseActivity;
 import vn.snapbuck.sos.fragment.CrimeMapFragment;
 import vn.snapbuck.sos.fragment.NotifyFragment;
 import vn.snapbuck.sos.fragment.ProfileFragment;
-import vn.snapbuck.sos.utils.CommonUtils;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
     private ViewPager viewPagerMain;
@@ -50,7 +40,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private void initView(){
         llMap = (LinearLayout)findViewById(R.id.ll_map);
         llProfile = (LinearLayout)findViewById(R.id.ll_profile);
-        llNotify = (LinearLayout)findViewById(R.id.ll_notify);
+        llNotify = (LinearLayout) findViewById(R.id.ll_notify);
         viewPagerMain = (ViewPager)findViewById(R.id.view_pager_main);
         viewPagerMain.setOffscreenPageLimit(3);
         imgMap = (ImageView) findViewById(R.id.img_map);
